@@ -46,28 +46,25 @@ selected_option = st.sidebar.radio('Select Option', ['Home', 'Distribution of Pr
 # Display content based on selected option
 if selected_option == 'Home':
     main_placeholder.empty()  # Clear the placeholder
-    st.write("## Background")
-    st.write("### What is it about?")
-    st.write("This dataset contains information related to Airbnb listings, offering valuable insights into various aspects of short-term rental properties. It includes details such as location, property type, amenities, pricing, and reviews, collected from Airbnb listings across different regions. This dataset presents an opportunity for data scientists and researchers to explore and analyze factors influencing Airbnb rental prices, understand market trends, and identify patterns in guest preferences and property characteristics. By leveraging this dataset, stakeholders in the hospitality industry can gain actionable insights to optimize pricing strategies, enhance guest experiences, and improve the overall efficiency of Airbnb hosting. Moreover, researchers can use this dataset to develop predictive models, recommendation systems, and other data-driven solutions aimed at improving decision-making processes and maximizing value for both hosts and guests in the Airbnb ecosystem.")
-    st.write("### Why does it matter?")
-    st.write("The dataset matters for several reasons. Firstly, it provides valuable insights into the dynamics of the short-term rental market, particularly through the lens of Airbnb listings. Understanding factors influencing rental prices and property characteristics can benefit various stakeholders, including property owners, travelers, and policymakers. Property owners can use the insights gained from the dataset to optimize pricing strategies, attract more guests, and maximize revenue. Travelers can make more informed decisions when selecting accommodations based on factors such as location, amenities, and pricing trends. Policymakers can leverage this data to develop regulations and policies that promote fair competition, consumer protection, and sustainable growth in the short-term rental industry. Overall, the dataset serves as a valuable resource for analyzing market trends, driving informed decision-making, and fostering innovation in the hospitality sector.")
-    st.write("## Data")
-    st.write("### Data Source")
-    st.write("[Kaggle/airbnb-price-dataset](https://www.kaggle.com/datasets/rupindersinghrana/airbnb-price-dataset)")
-    st.write("### Data Size")
-    st.write("101.5 MB")
-    st.write("### Data Shape")
-    st.write("Rows: 74111, Columns: 29")
-    st.write("### Time Period")
-    st.write("2008 to 2017")
-    with main_placeholder:
-        st.write("Welcome to the Home Page")
-        st.write("Explore the data by selecting an option from the sidebar.")
+    image_url = "https://www.spinxdigital.com/app/uploads/2022/11/image-airbnb.jpg"
+    # Display the image from URL
+    st.image(image_url, caption='', use_column_width=True)
+    st.write("Explore the data by selecting an option from the sidebar.")
+#     with main_placeholder:
+#         st.write("Home Page")
 elif selected_option == 'Distribution of Price Range':
     main_placeholder.empty()  # Clear the placeholder
     with main_placeholder:
-        st.subheader(f'Value Counts of price_range')
-        st.altair_chart(plot_value_counts(df, 'price_range'), use_container_width=True)
+        st.subheader("Distribution of Price Range")
+        distribution_plot = alt.Chart(df).mark_bar().encode(
+            x=alt.X('price_range', title='Price Range'),
+            y=alt.Y('count()', title='Count')
+        ).properties(
+            width=600,
+            height=400,
+            title="Distribution of Price Range"
+        )
+        st.altair_chart(distribution_plot, use_container_width=True)
 elif selected_option == 'Histogram of Prices':
     main_placeholder.empty()  # Clear the placeholder
     with main_placeholder:
@@ -135,7 +132,7 @@ elif selected_option == 'Distribution of Listings by Room Type':
         ).properties(
             width=600,
             height=400,
-            title='Count of Listings by Room Type'
+            title='Distribution of Listings by Room Type'
         )
         st.altair_chart(bar_chart)
 elif selected_option == 'Distribution of Listings by City':
@@ -151,7 +148,7 @@ elif selected_option == 'Distribution of Listings by City':
         ).properties(
             width=600,
             height=400,
-            title='Count of Listings by City'
+            title='Distribution of Listings by City'
         )
         st.altair_chart(bar_chart)
 elif selected_option == 'Average Price of Listings by City':
@@ -217,7 +214,7 @@ elif selected_option == 'Number of Reviews vs. Listing Price':
         ).properties(
             width=600,
             height=400,
-            title="Number of Reviews vs. Listing Price"
+            title="Scatterplot of Number of Reviews vs. Listing Price"
         )
 
         st.subheader("Number of Reviews vs. Listing Price")
