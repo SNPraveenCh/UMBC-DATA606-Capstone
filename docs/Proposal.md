@@ -87,7 +87,7 @@ What are your research questions?
 
 ##### **Data Visualization**
 
-![Distribution of listing by Price Range]()
+![Distribution of listing by Price Range](Images/Price_range_distribution.png)
 - The above graph represent the distribution of listings by price_range which is our target variable. We can clearly see that most number of listings come under medium category. Also we can observe that there is class imbalance within our target variable.
 ![Top 10 neighborhoods with highest average price of listings]()
 - The above graph represents the top neighborhoods with the highest average price of listings in the United States. The most expensive neighborhood on the list is Wilmington.
