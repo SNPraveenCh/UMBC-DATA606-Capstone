@@ -89,17 +89,17 @@ What are your research questions?
 
 ![Distribution of listing by Price Range](Images/Price_range_distribution.png)
 - The above graph represent the distribution of listings by price_range which is our target variable. We can clearly see that most number of listings come under medium category. Also we can observe that there is class imbalance within our target variable.
-![Top 10 neighborhoods with highest average price of listings]()
+![Top 10 neighborhoods with highest average price of listings](Images/Top10Neigbourhoods.png)
 - The above graph represents the top neighborhoods with the highest average price of listings in the United States. The most expensive neighborhood on the list is Wilmington.
-![Distribution of listings by City]()
+![Distribution of listings by City](Images/listings_by_city.png)
 - The above graph represents distribution of listings by City. The City with most number of listings is NYC (New York City).
-![Average Prices of listing by City]()
+![Average Prices of listing by City](Images/average_price_by_city.png)
 - The above graph represents the Average price of listings by City. The City with highest average price of listings is SF (San Fransico).
-- ![Distribution of listings by Room Type]()
+- ![Distribution of listings by Room Type](Images/room_type_distribution.png)
 - The above graph represents distribution of listings by Room Type. From the graph we can say most number of listings come under 'Entire home/Apt' category.
-![Correlation matrix]()
+![Correlation matrix](Images/Correlation.png)
 - Above graph represents the corelation matrix of numerical features in our dataset.
-![Scatter Plot of number of reviews and listing price]()
+![Scatter Plot of number of reviews and listing price](Images/Scatterplot.png)
 - The scatter plot shows the relationship between the number of reviews a product has and its listing price. We can observe that if the numer of reviews are more then the price is less. This maybe because if an appartment has been listed in the airbnb for a long period of time, ofcourse it might have more number of reviews and since it is an old appartment the price maybe low. Also if listing is new there might be high price on it with less number of reviews.
 
 #### **Model Training**
