@@ -6,6 +6,8 @@ Author - **Praveen Chandanala**
 
 Univesity ID - **EC20816**
 
+Spring 2024
+
 **Github - [github.com/SNPraveenCh](https://github.com/SNPraveenCh/UMBC-DATA606-Capstone)**
 
 **Linkedin - [linkedin/snpraveen-chandanala](https://www.linkedin.com/in/snpraveen-chandanala/)**
