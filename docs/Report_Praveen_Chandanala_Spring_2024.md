@@ -12,7 +12,7 @@ Univesity ID - **EC20816**
 
 **Ppt - [Powerpoint presentation file](https://docs.google.com/presentation/d/1X6WV_-SCpRyy6ChQ5uPrGB_IJWEx4HD2Ru6vzfQqqmk/edit?usp=sharing)**
 
-**Youtube - [Youtube video]()**
+**Youtube - [Youtube video link](https://youtu.be/YGVQIoRCLmg)**
 
 ---
 
@@ -82,24 +82,39 @@ What are your research questions?
 #### **Exploratory Data Analysis**
 
 ##### **Data Pre Processing**
-- There are lot of missing values in our dataset. Imputing missing values is crucial to ensure that the dataset is complete and usable for analysis or modeling purposes. So we're using various methods to impute missing values for different columns based on certain criteria like mode or mean.
-- For columns like 'bathrooms', 'bedrooms', 'beds', 'host_response_rate', 'host_has_profile_pic', 'host_identity_verified', 'host_since', and 'zipcode' we're using mode imputation and for the columns like 'neighbourhood', 'thumbnail_url', 'first_review' and 'last_review' which have string as value we are replace it with empty string ''.
+- There are lot of missing values in our dataset. Imputing missing values is crucial to ensure that the dataset is complete and usable for analysis or modeling purposes. So I'm using various methods to impute missing values for different columns based on certain criteria like mode or mean.
+- For columns like 'bathrooms', 'bedrooms', 'beds', 'host_response_rate', 'host_has_profile_pic', 'host_identity_verified', 'host_since', and 'zipcode' I'm using mode imputation and for the columns like 'neighbourhood', 'thumbnail_url', 'first_review' and 'last_review' which have string as value we are replace it with empty string ''.
 
 ##### **Data Visualization**
 
+The below are some of the data visualizations that we gained insights from, in our project.
+
 ![Distribution of listing by Price Range](Images/Price_range_distribution.png)
+
 - The above graph represent the distribution of listings by price_range which is our target variable. We can clearly see that most number of listings come under medium category. Also we can observe that there is class imbalance within our target variable.
+
 ![Top 10 neighborhoods with highest average price of listings](Images/Top10Neigbourhoods.png)
+
 - The above graph represents the top neighborhoods with the highest average price of listings in the United States. The most expensive neighborhood on the list is Wilmington.
+
 ![Distribution of listings by City](Images/listings_by_city.png)
+
 - The above graph represents distribution of listings by City. The City with most number of listings is NYC (New York City).
+
 ![Average Prices of listing by City](Images/average_price_by_city.png)
+
 - The above graph represents the Average price of listings by City. The City with highest average price of listings is SF (San Fransico).
-- ![Distribution of listings by Room Type](Images/room_type_distribution.png)
+
+![Distribution of listings by Room Type](Images/room_type_distribution.png)
+
 - The above graph represents distribution of listings by Room Type. From the graph we can say most number of listings come under 'Entire home/Apt' category.
+
 ![Correlation matrix](Images/Correlation.png)
+
 - Above graph represents the corelation matrix of numerical features in our dataset.
+
 ![Scatter Plot of number of reviews and listing price](Images/Scatterplot.png)
+
 - The scatter plot shows the relationship between the number of reviews a product has and its listing price. We can observe that if the numer of reviews are more then the price is less. This maybe because if an appartment has been listed in the airbnb for a long period of time, ofcourse it might have more number of reviews and since it is an old appartment the price maybe low. Also if listing is new there might be high price on it with less number of reviews.
 
 #### **Model Training**
@@ -109,23 +124,33 @@ What are your research questions?
 - By evaluating their performance on the test and validation set based on our evaluation metric which is F1 score, the best performing classification model among these is Random Forest Classifier with F1 score of 69.9%.
   
 #### **Application of the Trained Models**
-- We are creating a web application for our project using streamlit. Streamlit is an open-source Python library that allows you to create interactive web applications for data science and machine learning projects with ease. It simplifies the process of building web applications by providing a simple and intuitive interface, allowing developers to focus on data exploration, visualization, and model deployment without dealing with the complexities of web development.
+- I created a web application for our project using streamlit. Streamlit is an open-source Python library that allows user to create interactive web applications for data science and machine learning projects with ease. It simplifies the process of building web applications by providing a simple and intuitive interface, allowing developers to focus on data exploration, visualization, and model deployment without dealing with the complexities of web development.
 - Streamlit is well-suited for a wide range of use cases, including:
   - Data exploration and visualization
   - Dashboarding and reporting
   - Prototyping machine learning models
   - Building interactive demos and tutorials
   - Creating custom web-based tools for data analysis and decision-making
-- We created two different streamlit applications. One for Data Visualization and other for predicting Airbnb prices by giving custom input using our well performed model.
+- I created two different streamlit applications. One for Data Visualization and other for predicting Airbnb prices by giving custom input using our well performed model.
+
+#### **Conclusion**
+In this project, I investigated factors influencing Airbnb rental prices using a publicly available dataset from kaggle on Airbnb listings spanning from 2008 to 2017.  Through data preprocessing, visualization, and model training, we gained several key insights:
+- In terms of model performance, the Random Forest Classifier emerged as the top-performing model, achieving an F1 score of 69.9%. This model demonstrated robust predictive capabilities, enabling us to forecast Airbnb rental prices with reasonable accuracy.
+- We used the Streamlit framework to develop interactive web applications for data visualization and price prediction using our trained model. These applications provide users with intuitive interfaces for exploring insights from the dataset and obtaining personalized price estimates for Airbnb listings
+
+#### **Lessons Learned**
+- Effective data preprocessing is crucial for ensuring the quality and reliability of analysis and modeling results, highlighting the significance of handling missing values, encoding categorical variables, and normalizing numerical features appropriately.
+- Careful selection of relevant features based on exploratory analysis is essential for building accurate predictive models, preventing overfitting or underfitting issues.
+
+#### **Limitations**
+- The data used for this project is from several years ago (2008-2017). Market trends may have shifted since then.
+- The Streamlit application is a basic prototype and can be enhanced with additional functionalities.
 
 #### **Future Work**
 - The model's accuracy can be further improved by incorporating additional features and using more advanced machine learning techniques.
 - Explore the impact of temporal features like seasonality and holidays on listing prices.
-- The Streamlit application is a basic prototype and can be enhanced with additional functionalities.
-
-#### **Conclusion**
-In this project, we investigated factors influencing Airbnb rental prices using a publicly available dataset from kaggle on Airbnb listings spanning from 2008 to 2017.  Through data preprocessing, visualization, and model training, we gained several key insights:
-- In terms of model performance, the Random Forest Classifier emerged as the top-performing model, achieving an F1 score of 69.9%. This model demonstrated robust predictive capabilities, enabling us to forecast Airbnb rental prices with reasonable accuracy.
-- We used the Streamlit framework to develop interactive web applications for data visualization and price prediction using our trained model. These applications provide users with intuitive interfaces for exploring insights from the dataset and obtaining personalized price estimates for Airbnb listings
+- Develop a more comprehensive Streamlit application with functionalities like user account management and personalized recommendations.
 
 #### **References**
+
+- Streamlit Documentation https://docs.streamlit.io/
